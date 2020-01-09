@@ -21,6 +21,12 @@ class Topics:
         button = Button(self.root, text="Stergere topic", command=self.stergere_topic)
         button.grid(row=3, column=1)
 
+        button = Button(self.root, text="Abonare", command=self.abonare_topic)
+        button.grid(row=4, column=1)
+
+        button = Button(self.root, text="Dezabonare", command=self.dezabonare_topic)
+        button.grid(row=4, column=2)
+
 
         self.root.mainloop()
 
@@ -39,3 +45,13 @@ class Topics:
         sel = self.textbox.curselection()
         for index in sel[::-1]:
             self.textbox.delete(index)
+
+    def abonare_topic(self):
+        sel = self.textbox.curselection()
+        #for index in sel[::-1]:
+         #   self.textbox.delete(index)
+
+    def dezabonare_topic(self):
+        sel = self.textbox.curselection()
+        # for index in sel[::-1]:
+        #   self.textbox.delete(index)
